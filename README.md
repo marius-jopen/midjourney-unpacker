@@ -38,27 +38,48 @@ output/
 
 ## 🚀 How to use
 
-### Quick Start (Mac)
+### Quick Start
+
+**Choose the right executable for your system:**
+
+#### 🍎 Mac (Python required)
 1. **Add your image folders** to the `input/` directory
-2. **Double-click** `extract_images.command`
+2. **Double-click** `extract_images_mac_python.command`
+3. **Check the results** in the `output/` directory
+
+#### 🪟 Windows (Python required)
+1. **Add your image folders** to the `input/` directory
+2. **Double-click** `extract_images_windows_python.bat`
+3. **Check the results** in the `output/` directory
+
+#### 🪟 Windows (No Python needed)
+1. **Add your image folders** to the `input/` directory
+2. **Right-click** `extract_images_windows_no_python.ps1` and select **"Run with PowerShell"**
+   - Or double-click if PowerShell is your default for .ps1 files
 3. **Check the results** in the `output/` directory
 
 ### Manual Execution
-Alternatively, you can run the Python script directly:
+Alternatively, you can run the Python script directly on any platform:
 ```bash
+# On Mac/Linux
 python3 script/image_extractor.py
+
+# On Windows
+python script\image_extractor.py
 ```
 
 ## 📁 Project Structure
 
 ```
 midjourney-unpacker/
-├── extract_images.command     # Mac executable (double-click to run)
+├── extract_images_mac_python.command        # Mac executable (Python required)
+├── extract_images_windows_python.bat        # Windows executable (Python required)
+├── extract_images_windows_no_python.ps1     # Windows executable (No Python needed)
 ├── script/
-│   └── image_extractor.py     # Python script that does the work
-├── input/                     # Put your image folders here
-├── output/                    # Extracted images appear here
-└── README.md                  # This file
+│   └── image_extractor.py                   # Python script that does the work
+├── input/                                   # Put your image folders here
+├── output/                                  # Extracted images appear here
+└── README.md                                # This file
 ```
 
 ## 🎯 Supported Image Formats
@@ -77,12 +98,18 @@ The tool supports all common image formats:
 - **Folder-based naming**: Extracted files are prefixed with their original folder name
 - **Progress feedback**: See exactly what's happening with emoji-rich console output
 - **Error handling**: Graceful handling of permission issues and corrupted files
-- **Cross-platform**: Works on Mac, Windows, and Linux (though the .command file is Mac-specific)
+- **Cross-platform**: Works on Mac, Windows, and Linux with multiple executable options
+- **No dependencies**: PowerShell version requires no additional software on Windows
 
 ## 🔧 Requirements
 
+### For Python versions (.command, .bat, manual execution):
 - **Python 3.6+** (comes pre-installed on modern Macs)
 - No additional dependencies required (uses only Python standard library)
+
+### For PowerShell version (.ps1):
+- **Windows with PowerShell** (included in all modern Windows versions)
+- **No Python required!**
 
 ## 📝 Notes
 
